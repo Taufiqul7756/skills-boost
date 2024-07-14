@@ -16,6 +16,18 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    // borderRadius: {
+    //   "tl-4": "4px 4px 4px 4px",
+    // },
+    backgroundImage: {
+      "footer-pattern": "url('/public/Vector.png')",
+    },
+    backgroundSize: {
+      "size-2": "50%",
+    },
+    backgroundRepeat: {
+      "repeat-2": "repeat",
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

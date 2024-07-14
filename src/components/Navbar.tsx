@@ -3,9 +3,11 @@
 import React, { useState } from "react";
 import { FaSearch, FaBars } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 import { CiDark } from "react-icons/ci";
 import { LuSunMedium } from "react-icons/lu";
 import { Button } from "@nextui-org/button";
+import logo from "../../public/Logo.svg";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +19,6 @@ const Navbar: React.FC = () => {
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-    // Add logic to toggle the actual theme here
   };
 
   return (
@@ -45,9 +46,8 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="flex justify-between items-center md:justify-center md:space-x-4 w-full md:w-auto">
-          <Link href="/" className="text-lg font-bold">
-            Logo
-          </Link>
+          <Image src={logo} alt="LOGO" width={138} height={25} className="" />
+
           <button onClick={toggleMenu} className="md:hidden">
             <FaBars size={24} />
           </button>
@@ -61,12 +61,6 @@ const Navbar: React.FC = () => {
           <button onClick={toggleTheme}>
             {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
           </button>
-          {/* <Link
-            href="/login"
-            className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            LOGIN
-          </Link> */}
 
           <Button
             className="bg-slate-300 font-bold"
@@ -76,16 +70,9 @@ const Navbar: React.FC = () => {
             LOGIN
           </Button>
 
-          {/* <Link
-            href="/signup"
-            className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            SIGNUP
-          </Link> */}
           <Button
             className="bg-[#001731] font-semibold text-white"
             radius="full"
-            href="/signup"
           >
             SIGNUP
           </Button>
