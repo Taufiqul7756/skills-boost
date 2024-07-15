@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import certificate from "../../public/images/certificate.png";
 import fullStack from "../../public/images/full-stack.png";
+import { Card, CardBody } from "@nextui-org/react";
 
 const ProjectsAndCertificationsSection: React.FC = () => {
   return (
@@ -32,22 +33,26 @@ const ProjectsAndCertificationsSection: React.FC = () => {
               "Backend Development",
               "Automation Development",
             ].map((course, index) => (
-              <div
+              <Card
                 key={index}
-                className="border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className="hover:shadow-md transition-shadow rounded-md"
               >
-                <div className="flex items-center">
-                  <Image
-                    src={fullStack}
-                    alt="Full-Stack Icon"
-                    className="w-8 h-8 mr-3"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-gray-800">{course}</h4>
-                    <p className="text-gray-600">50 Courses ↗</p>
+                <CardBody className="flex items-start p-2">
+                  <div className="flex justify-start items-center">
+                    <div>
+                      <Image
+                        src={fullStack}
+                        alt="Full-Stack Icon"
+                        className="w-8 h-8 mr-3"
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <h4 className="font-semibold text-gray-800">{course}</h4>
+                      <p className="text-gray-600">50 Courses ↗</p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </CardBody>
+              </Card>
             ))}
           </div>
         </div>
@@ -72,7 +77,7 @@ const ProjectsAndCertificationsSection: React.FC = () => {
               className="rounded-lg shadow-md"
             />
           </div>
-          <div className="mt-20">
+          <div className="mt-4">
             <a href="#" className="text-black hover:underline">
               View courses with Certificate ↗
             </a>
