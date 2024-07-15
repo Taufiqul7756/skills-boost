@@ -1,142 +1,113 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaSearch, FaBars } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { CiDark } from "react-icons/ci";
 import { LuSunMedium } from "react-icons/lu";
-import { Button } from "@nextui-org/button";
+import {
+  Button,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+} from "@nextui-org/react";
 import logo from "../../public/Logo.svg";
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const CustomNavbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
 
   return (
-    <nav className={`w-full p-4 bg-white dark:bg-gray-800 shadow-md`}>
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="hidden md:flex space-x-6">
-          <Link
-            href="/courses"
-            className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            COURSES
-          </Link>
-          <Link
-            href="/developers"
-            className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            FOR DEVELOPERS
-          </Link>
-          <Link
-            href="/blog"
-            className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            BLOG
-          </Link>
+    <Navbar className="" isBordered>
+      <div className="flex justify-between items-center">
+        <div className="">
+          <NavbarContent className="hidden md:flex space-x-6">
+            <NavbarItem>
+              <Link href="/courses">COURSES</Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link href="/developers">FOR DEVELOPERS</Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link href="/blog">BLOG</Link>
+            </NavbarItem>
+          </NavbarContent>
         </div>
 
-        <div className="flex justify-between items-center md:justify-center md:space-x-4 w-full md:w-auto">
-          <Image src={logo} alt="LOGO" width={138} height={25} className="" />
-
-          <button onClick={toggleMenu} className="md:hidden">
-            <FaBars size={24} />
-          </button>
+        <div className="px-24">
+          <NavbarBrand className="flex justify-center w-full md:w-auto">
+            <Image src={logo} alt="LOGO" width={138} height={25} />
+          </NavbarBrand>
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
-          <FaSearch
-            className="text-gray-800 dark:text-gray-200 cursor-pointer"
-            size={20}
-          />
-          <button onClick={toggleTheme}>
-            {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
-          </button>
-
-          <Button
-            className="bg-slate-300 font-bold"
-            radius="full"
-            href="/login"
-          >
-            LOGIN
-          </Button>
-
-          <Button
-            className="bg-[#001731] font-semibold text-white"
-            radius="full"
-          >
-            SIGNUP
-          </Button>
+        <div>
+          <NavbarContent className="hidden md:flex items-center space-x-4">
+            <FaSearch className="cursor-pointer" size={20} />
+            <button onClick={toggleTheme}>
+              {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
+            </button>
+            <Button
+              className="bg-slate-300 font-bold"
+              radius="full"
+              href="/login"
+            >
+              LOGIN
+            </Button>
+            <Button
+              className="bg-[#001731] font-semibold text-white"
+              radius="full"
+              href="/signup"
+            >
+              SIGNUP
+            </Button>
+          </NavbarContent>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden mt-4 space-y-4">
-          <Link
-            href="/courses"
-            className="block text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            COURSES
-          </Link>
-          <Link
-            href="/developers"
-            className="block text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            FOR DEVELOPERS
-          </Link>
-          <Link
-            href="/blog"
-            className="block text-gray-800 dark:text-gray-200 hover:text-blue-500"
-          >
-            BLOG
-          </Link>
-          <div className="flex justify-between items-center">
-            <div>
-              <button onClick={toggleTheme}>
-                {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
-              </button>
-            </div>
-
-            <div className="flex justify-end items-center gap-10">
-              <FaSearch
-                className="text-gray-800 dark:text-gray-200 cursor-pointer"
-                size={20}
-              />
-              {/* <Link
-                href="/login"
-                className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
-              >
-                LOGIN
-              </Link> */}
-              <Button
-                className="bg-slate-300 font-bold"
-                radius="full"
-                href="/login"
-              >
-                LOGIN
-              </Button>
-              <Button
-                className="bg-[#001731] font-semibold text-white"
-                radius="full"
-                href="/signup"
-              >
-                SIGNUP
-              </Button>
-            </div>
+      <NavbarMenuToggle className="md:hidden" />
+      <NavbarMenu className="md:hidden">
+        <NavbarMenuItem>
+          <Link href="/courses">COURSES</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/developers">FOR DEVELOPERS</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/blog">BLOG</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <div className="flex items-center space-x-4">
+            <FaSearch className="cursor-pointer" size={20} />
+            <button onClick={toggleTheme}>
+              {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
+            </button>
+            <Button
+              className="bg-slate-300 font-bold"
+              radius="full"
+              href="/login"
+            >
+              LOGIN
+            </Button>
+            <Button
+              className="bg-[#001731] font-semibold text-white"
+              radius="full"
+              href="/signup"
+            >
+              SIGNUP
+            </Button>
           </div>
-        </div>
-      )}
-    </nav>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default CustomNavbar;

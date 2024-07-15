@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import icon1 from "../../public/images/about-us.png";
-import icon2 from "../../public/images/about-us.png";
-import icon3 from "../../public/images/about-us.png";
+import icon from "../../public/images/about-us.png";
 
 const AboutUs: React.FC = () => {
   return (
@@ -22,7 +20,7 @@ const AboutUs: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center">
             <Image
-              src={icon1}
+              src={icon}
               alt="World Class Teachers"
               width={80}
               height={80}
@@ -35,7 +33,7 @@ const AboutUs: React.FC = () => {
           </div>
           <div className="text-center">
             <Image
-              src={icon2}
+              src={icon}
               alt="Global Community"
               width={80}
               height={80}
@@ -48,7 +46,7 @@ const AboutUs: React.FC = () => {
           </div>
           <div className="text-center">
             <Image
-              src={icon3}
+              src={icon}
               alt="Top Notch Courses"
               width={80}
               height={80}

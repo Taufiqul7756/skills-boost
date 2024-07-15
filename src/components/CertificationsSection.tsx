@@ -77,7 +77,7 @@ const ProjectsAndCertificationsSection: React.FC = () => {
               className="rounded-lg shadow-md"
             />
           </div>
-          <div className="mt-4">
+          <div className="mt-20">
             <a href="#" className="text-black hover:underline">
               View courses with Certificate ↗
             </a>

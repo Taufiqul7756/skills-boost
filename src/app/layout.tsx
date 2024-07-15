@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
 import { Providers } from "@/providers/providers";
+import CustomNavbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Providers>
             <TopBar />
-            <Navbar />
+            <CustomNavbar />
             <main className="flex-grow min-h-screen">{children}</main>
             <Footer />
           </Providers>

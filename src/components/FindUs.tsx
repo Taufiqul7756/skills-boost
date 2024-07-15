@@ -8,7 +8,7 @@ import { IoIosFlash } from "react-icons/io";
 
 const FindUs = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24 px-4 lg:px-24 bg-white">
+    <section className="flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24 px-4 lg:px-48 bg-white">
       {/* Left Side */}
       <div className="flex flex-col items-start lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
         <div className="flex items-center mb-4 py-2">

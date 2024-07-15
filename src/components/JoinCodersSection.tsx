@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/react";
 const JoinCodersSection: React.FC = () => {
   return (
     <section className="bg-gray-900 py-20">
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
+      <div className="container mx-auto px-32 flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
         {/* Left Side */}
         <div className="mb-8 lg:mb-0 lg:w-1/3">
           <div className="grid">
