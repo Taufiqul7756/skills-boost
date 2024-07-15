@@ -5,6 +5,7 @@ import { Card, CardBody, CardFooter, Divider, Image } from "@nextui-org/react";
 import { IoBookSharp } from "react-icons/io5";
 import { BsFillStopwatchFill } from "react-icons/bs";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const PopularCourses: React.FC = () => {
   const cardData = [
@@ -110,9 +111,27 @@ const PopularCourses: React.FC = () => {
   const endIdx = startIdx + cardsPerPage;
   const visibleCards = cardData.slice(startIdx, endIdx);
 
+  const renderStars = (rating: number) => {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+    const stars = [];
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <FaStar key={`full-${i}`} size={20} className="text-yellow-500" />
+      );
+    }
+
+    if (halfStar) {
+      stars.push(<FaStar key="half" size={20} className="text-yellow-500" />);
+    }
+
+    return stars;
+  };
+
   return (
     <section className="bg-white py-20 px-4 sm:px-10 md:px-20 lg:px-44 relative">
-      {/* popular courses - Top */}
+      {/* Popular courses - Top */}
       <div className="container mx-auto px-4 text-center mb-12">
         <div className="font-bold grid justify-center items-center mb-2">
           <h1>
@@ -130,7 +149,7 @@ const PopularCourses: React.FC = () => {
         </div>
       </div>
 
-      {/* Card section  */}
+      {/* Card section */}
       <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-x-auto scrollbar-hide relative">
         {visibleCards.map((item) => (
           <Card shadow="sm" key={item.id}>
@@ -165,11 +184,12 @@ const PopularCourses: React.FC = () => {
               </div>
               <div className="flex gap-10 justify-start mt-5">
                 <span>{item.ratings}</span>
+                <span className="flex gap-1">{renderStars(item.ratings)}</span>
                 <span>({item.reviews})</span>
               </div>
 
-              <div className="mt-5 text-[#8C8F9A] text-lg">
-                <span>By: {item.author}</span>
+              <div className="mt-5 text-[#8C8F9A] text-[16px]">
+                <span>By {item.author}</span>
               </div>
             </CardBody>
 

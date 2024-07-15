@@ -6,7 +6,8 @@ import { IoBookSharp } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-r from-[#DFD6F2] via-[#f6eaf3] to-[#FDFCE8] py-20">
+    // <div className="bg-gradient-to-r from-[#ff6d33] to-[#FDFCE8] py-20">
+    <div className="bg-[#FDFCE8] py-20">
       <div className="text-center max-w-2xl mx-auto px-4">
         <div className="flex items-center justify-center mb-4">
           <div className="flex items-center mb-4 py-2">

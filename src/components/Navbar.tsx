@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+
+import { CiSearch } from "react-icons/ci";
+
 import Link from "next/link";
 import Image from "next/image";
 import { CiDark } from "react-icons/ci";
@@ -26,7 +28,7 @@ const CustomNavbar: React.FC = () => {
   };
 
   return (
-    <Navbar className="" isBordered>
+    <Navbar className="bg-[#FDFCE8]">
       <div className="flex justify-between items-center">
         <div className="">
           <NavbarContent className="hidden md:flex space-x-6">
@@ -50,12 +52,12 @@ const CustomNavbar: React.FC = () => {
 
         <div>
           <NavbarContent className="hidden md:flex items-center space-x-4">
-            <FaSearch className="cursor-pointer" size={20} />
+            <CiSearch className="cursor-pointer" size={20} />
             <button onClick={toggleTheme}>
-              {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
+              {darkMode ? <CiDark size={20} /> : <LuSunMedium size={20} />}
             </button>
             <Button
-              className="bg-slate-300 font-bold"
+              className="bg-white font-semibold"
               radius="full"
               href="/login"
             >
@@ -85,7 +87,7 @@ const CustomNavbar: React.FC = () => {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <div className="flex items-center space-x-4">
-            <FaSearch className="cursor-pointer" size={20} />
+            <CiSearch className="cursor-pointer" size={20} />
             <button onClick={toggleTheme}>
               {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
             </button>
