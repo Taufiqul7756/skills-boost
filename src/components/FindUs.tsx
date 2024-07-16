@@ -28,26 +28,29 @@ const FindUs = () => {
         </p>
 
         <div className="flex justify-center items-center gap-5 ">
-          <div className="flex justify-center items-center gap-2 bg-[#131836] px-10 py-1 rounded-md">
-            <div className="text-white">
-              <IoLogoGooglePlaystore size={35} />
-            </div>
-
-            <div className="grid justify-center items-center text-white">
-              <span className="font-thin">Get It On </span>
-              <span>Google Play </span>
-            </div>
+          <div className="flex justify-center items-center gap-5 ">
+            <Button
+              className="flex justify-center items-center gap-2 bg-[#131836] p-7 rounded-md"
+              startContent={
+                <IoLogoGooglePlaystore size={35} className="text-white" />
+              }
+            >
+              <div className="grid justify-center items-center text-white ">
+                <span className="font-thin">Get It On </span>
+                <span>Google Play </span>
+              </div>
+            </Button>
           </div>
-
-          <div className="flex justify-center items-center gap-2 bg-[#131836] px-10 py-1 rounded-md">
-            <div className="text-white">
-              <FaApple size={35} />
-            </div>
-
-            <div className="grid justify-center items-center text-white">
-              <span className="font-thin">Download</span>
-              <span>App Store </span>
-            </div>
+          <div className="flex justify-center items-center gap-5 ">
+            <Button
+              className="flex justify-center items-center gap-2 bg-[#131836] p-7 rounded-md"
+              startContent={<FaApple size={35} className="text-white" />}
+            >
+              <div className="grid justify-center items-center text-white ">
+                <span className="font-thin">Download </span>
+                <span>App Store </span>
+              </div>
+            </Button>
           </div>
         </div>
       </div>
