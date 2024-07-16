@@ -17,9 +17,15 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import logo from "../../public/Logo.svg";
+import CoursesDropdown from "./CoursesDropdown";
 
 const CustomNavbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -31,7 +37,7 @@ const CustomNavbar: React.FC = () => {
         <div className="">
           <NavbarContent className="hidden md:flex space-x-6">
             <NavbarItem>
-              <Link href="/courses">COURSES</Link>
+              <button onClick={toggleDropdown}>COURSES</button>
             </NavbarItem>
             <NavbarItem>
               <Link href="/developers">FOR DEVELOPERS</Link>
@@ -79,6 +85,12 @@ const CustomNavbar: React.FC = () => {
           </NavbarContent>
         </div>
       </div>
+
+      {showDropdown && (
+        <div className="absolute left-0 top-full w-full bg-white shadow-lg">
+          <CoursesDropdown />
+        </div>
+      )}
 
       <NavbarMenuToggle className="md:hidden" />
       <NavbarMenu className="md:hidden">

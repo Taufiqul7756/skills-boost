@@ -1,0 +1,69 @@
+{
+  "BusinessCards": [
+    "Standard Business Cards",
+    "Low Price Business Cards",
+    "Round Corner Business Cards",
+    "Magnet Business Cards",
+    "Raised Spot UV Business Cards",
+    "Painted Edge Business Cards",
+    "Foil Worn Business Cards",
+    "Linen Uncoated Business Cards",
+    "Folding Business Cards",
+    "Plastic Business Cards",
+    "Leaf Business Cards"
+  ],
+  "Folders": [
+    "Presentation Folders 14 Pt Matte Finish",
+    "Presentation Folders 14 Pt UV (high gloss)",
+    "Presentation Folders Metallic Foil Finish",
+    "Presentation Folders 14 Pt Matte Laminated",
+    "UV (High Gloss) Flyer / Brochures"
+  ],
+  "FlyerAndBrochures": [
+    "Standard Flyer / Brochures",
+    "100lb Gloss Text Flyer / Brochures",
+    "100lb Gloss Cover Flyer / Brochures",
+    "Matt Finish Flyers Flyer / Brochures",
+    "UV (High Gloss) Flyer / Brochures"
+  ],
+  "GreetingCardsInvitations": ["Flat Greeting Cards", "Folded Greeting Cards"],
+  "MagazineAndBooklets": ["Bulk Booklets"],
+  "Magnets": ["Magnets Business Cards", "Car Magnets", "Cut to Shape Magnets"],
+  "Banners": [
+    "Vinyl Banners",
+    "Step & Repeat Banners",
+    "4mm Chloroplast Signs",
+    "10mm Coroplast Signs",
+    "Feather Flags",
+    "Teardrop Flags",
+    "X-Stand Banner",
+    "Retractable Rollup Banners",
+    "Deluxe Single-Sided Rollup Banners",
+    "Deluxe Double-Sided Retractable Rollup Banners",
+    "Real Estate Signs",
+    "Yard Signs",
+    "Aluminium Heavy Duty Signs",
+    "Mesh Banners",
+    "Pole Flags",
+    "Vinyl Floor Graphics",
+    "Standard Clings: White",
+    "Round Vinyl Floor Graphics",
+    "White PVC Counter Cards",
+    "Foam Core Counter Cards"
+  ],
+  "StickerAndLabel": [
+    "Waterproof Roll Labels",
+    "Paper Roll labels",
+    "Polyester Roll Labels",
+    "Standard Cut Paper Labels",
+    "Bumper Sticker",
+    "Die-Cut Sticker",
+    "Clear Sticker",
+    "Address Labels",
+    "Custom Roll Labels",
+    "Clear BOPP Roll Labels",
+    "Oval Roll Labels",
+    "Bright Silver Roll Labels"
+  ],
+  "Binding": ["Perfect Binding", "Spiral Binding", "Coil Binding"]
+}
