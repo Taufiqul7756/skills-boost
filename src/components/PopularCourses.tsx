@@ -229,7 +229,7 @@ const PopularCourses: React.FC = () => {
     <section className="bg-white py-20 px-4 sm:px-10 md:px-20 lg:px-44 relative">
       {/* Popular courses - Top */}
       <div className="container mx-auto px-4 text-center mb-12">
-        <div className="font-bold text-xl grid justify-center items-center mb-2">
+        <div className="font-bold grid justify-center items-center mb-2">
           <h1>
             Popular <span className="text-[#007BFF]">Courses</span>
           </h1>
@@ -248,7 +248,7 @@ const PopularCourses: React.FC = () => {
       {/* Card section */}
       <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-x-auto scrollbar-hide relative">
         {visibleCards.map((item) => (
-          <Card shadow="sm" key={item.id} className="mb-5">
+          <Card shadow="sm" key={item.id} className="mb-3">
             <CardBody className="overflow-visible p-0">
               <Image
                 shadow="sm"
@@ -301,8 +301,33 @@ const PopularCourses: React.FC = () => {
       </div>
 
       {/* Carousel navigation buttons */}
+      <div className="flex justify-center items-center gap-10 mt-4 lg:hidden ">
+        <button
+          className={`p-3 rounded-full bg-[#DDE0F3] ${
+            currentPage === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-gray-200"
+          }`}
+          onClick={handlePrevPage}
+          disabled={currentPage === 0}
+        >
+          <FaChevronLeft />
+        </button>
+        <button
+          className={`p-3 rounded-full bg-[#DDE0F3] ${
+            currentPage === totalPages - 1
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-gray-200"
+          }`}
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages - 1}
+        >
+          <FaChevronRight />
+        </button>
+      </div>
+
       <button
-        className={`absolute top-1/2 left-[120px] transform -translate-y-1/2 p-3 rounded-full bg-[#DDE0F3] ${
+        className={`absolute top-1/2 left-[30px] md:left-[60px] lg:left-[120px] transform -translate-y-1/2 p-3 rounded-full bg-[#DDE0F3] hidden lg:block ${
           currentPage === 0
             ? "opacity-50 cursor-not-allowed"
             : "hover:bg-gray-200"
@@ -313,7 +338,7 @@ const PopularCourses: React.FC = () => {
         <FaChevronLeft />
       </button>
       <button
-        className={`absolute top-1/2 right-[120px] transform -translate-y-1/2 p-3 rounded-full bg-[#DDE0F3] ${
+        className={`absolute top-1/2 right-[30px] md:right-[60px] lg:right-[120px] transform -translate-y-1/2 p-3 rounded-full bg-[#DDE0F3] hidden lg:block ${
           currentPage === totalPages - 1
             ? "opacity-50 cursor-not-allowed"
             : "hover:bg-gray-200"
