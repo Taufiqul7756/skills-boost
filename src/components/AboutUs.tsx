@@ -5,7 +5,7 @@ import icon from "../../public/images/about-us.png";
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="bg-[#FEEFEA] py-16">
+    <section className="bg-aboutUs py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-2xl lg:text-3xl font-bold mb-6">
           Why Study With Us

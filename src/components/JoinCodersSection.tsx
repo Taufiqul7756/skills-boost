@@ -33,10 +33,10 @@ const JoinCodersSection: React.FC = () => {
         {/* Right Side */}
         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
           <div>
-            <h3 className="text-3xl font-bold text-blue-500">1M+</h3>
+            <h3 className="text-5xl font-bold text-blue-500">1M+</h3>
             <p className="text-white">Global Learners</p>
 
-            <div className="absolute mt-[-150px] mr-[100px] hidden md:block ">
+            <div className="absolute mt-[-154px] mr-[100px] hidden md:block ">
               <Image
                 src={vector}
                 alt="LOGO"
@@ -47,13 +47,13 @@ const JoinCodersSection: React.FC = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-blue-500">30k+</h3>
+            <h3 className="text-5xl font-bold text-blue-500">30k+</h3>
             <p className="text-white">People enrolled</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-blue-500">110+</h3>
+            <h3 className="text-5xl font-bold text-blue-500">110+</h3>
             <p className="text-white">Countries</p>
-            <div className="absolute mt-[-150px] ml-[-200px] hidden md:block ">
+            <div className="absolute mt-[-154px] ml-[-200px] hidden md:block ">
               <Image
                 src={vector}
                 alt="LOGO"

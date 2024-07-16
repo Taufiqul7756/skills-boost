@@ -1,6 +1,14 @@
 import type { Config } from "tailwindcss";
 import { nextui } from "@nextui-org/react";
 
+const colors = {
+  primary: "#131836",
+  hero: "#FDFCE8",
+  aboutUs: "#FEEFEA",
+  sunMode: "#131836",
+  textSemiBold: "#007BFF",
+};
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +18,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        ...colors,
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

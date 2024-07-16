@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Button, Divider } from "@nextui-org/react";
+import { Button, ButtonGroup, Divider } from "@nextui-org/react";
 
 interface ProductData {
   [key: string]: string[];
@@ -63,7 +63,7 @@ const CoursesDropdown: React.FC = () => {
 
   return (
     <div className="flex">
-      <div className="w-2/5 overflow-y-scroll h-96 p-4 bg-white">
+      <div className="w-2/6 overflow-y-scroll h-96 p-4 bg-white">
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -79,22 +79,27 @@ const CoursesDropdown: React.FC = () => {
           ))
         )}
       </div>
-      <div className="w-3/5 p-4 bg-white">
+      <div className="w-4/6 p-4 bg-white">
         <h1 className="font-semibold mb-3">All Products</h1>
         <Divider className="mb-3" />
-        <div className="flex justify-start items-center flex-wrap rounded-none">
+        <ButtonGroup>
           {["A-C", "D", "E", "F-G", "H-L", "M-P", "Q-R", "S", "T-V", "W-Z"].map(
             (range) => (
               <Button
+                size="sm"
                 key={range}
                 onClick={() => handleButtonClick(range)}
-                className="rounded-none bg-white"
+                className={`rounded-none border border-spacing-2  ${
+                  selectedRange === range
+                    ? "bg-default text-white"
+                    : "bg-white text-black"
+                }`}
               >
                 {range}
               </Button>
             )
           )}
-        </div>
+        </ButtonGroup>
         <div className="mt-4">
           {selectedRange && (
             <>

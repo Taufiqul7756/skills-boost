@@ -15,6 +15,10 @@ import {
   NavbarMenu,
   NavbarMenuToggle,
   NavbarMenuItem,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@nextui-org/react";
 import logo from "../../public/Logo.svg";
 import CoursesDropdown from "./CoursesDropdown";
@@ -37,7 +41,9 @@ const CustomNavbar: React.FC = () => {
         <div className="">
           <NavbarContent className="hidden md:flex space-x-6">
             <NavbarItem>
-              <button onClick={toggleDropdown}>COURSES</button>
+              <Button className="bg-[#FDFCE8] text-md" onClick={toggleDropdown}>
+                COURSES
+              </Button>
             </NavbarItem>
             <NavbarItem>
               <Link href="/developers">FOR DEVELOPERS</Link>
@@ -93,9 +99,11 @@ const CustomNavbar: React.FC = () => {
       )}
 
       <NavbarMenuToggle className="md:hidden" />
-      <NavbarMenu className="md:hidden">
-        <NavbarMenuItem>
-          <Link href="/courses">COURSES</Link>
+      <NavbarMenu className="md:hidden ">
+        <NavbarMenuItem className="mt-16">
+          <Link href="" onClick={toggleDropdown}>
+            COURSES
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Link href="/developers">FOR DEVELOPERS</Link>
@@ -104,25 +112,29 @@ const CustomNavbar: React.FC = () => {
           <Link href="/blog">BLOG</Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <div className="flex items-center space-x-4">
-            <CiSearch className="cursor-pointer" size={20} />
-            <button onClick={toggleTheme}>
-              {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
-            </button>
-            <Button
-              className="bg-slate-300 font-bold"
-              radius="full"
-              href="/login"
-            >
-              LOGIN
-            </Button>
-            <Button
-              className="bg-[#001731] font-semibold text-white"
-              radius="full"
-              href="/signup"
-            >
-              SIGNUP
-            </Button>
+          <div className="flex justify-between items-center space-x-4 mt-10">
+            <div>
+              <CiSearch className="cursor-pointer" size={20} />
+            </div>
+            <div className="flex justify-between items-center gap-5">
+              <button onClick={toggleTheme}>
+                {darkMode ? <LuSunMedium size={20} /> : <CiDark size={20} />}
+              </button>
+              <Button
+                className="bg-slate-300 font-bold"
+                radius="full"
+                href="/login"
+              >
+                LOGIN
+              </Button>
+              <Button
+                className="bg-[#001731] font-semibold text-white"
+                radius="full"
+                href="/signup"
+              >
+                SIGNUP
+              </Button>
+            </div>
           </div>
         </NavbarMenuItem>
       </NavbarMenu>
