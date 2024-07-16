@@ -19,34 +19,54 @@ import paypal from "../../public/PayPal svg.png";
 import Mastercard from "../../public/Mastercard svg.png";
 import visa from "../../public/visa.png";
 import express from "../../public/express.png";
+import vector from "../../public/Vector.png";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400">
+    <footer
+      className="bg-gray-900 text-gray-400"
+      // style={{
+      //   backgroundImage: `url(${vector.src}) `,
+      //   backgroundSize: " auto ",
+      //   backgroundRepeat: "repeat-x",
+      //   backgroundPosition: "bottom",
+      // }}
+    >
       <div className="container mx-auto py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 bg-footer-pattern bg-size-2 bg-repeat-2 w-full h-auto lg:h-[387px]">
         {/* first column - LOGO */}
-        <div>
-          <Image src={logo} alt="LOGO" width={138} height={25} className="" />
-          <div className="grid gap-3 mt-5 text-[#F9F9F9] ">
-            <p> Got Questions? Call us 24/7</p>
-            <div className="flex justify-start items-center gap-2">
-              <IoIosCall />
-              <p>+02 055 4156</p>
+        <div className="grid justify-center items-center">
+          <div>
+            <Image src={logo} alt="LOGO" width={138} height={25} className="" />
+            <div className="grid gap-3 mt-5 text-[#F9F9F9] ">
+              <p> Got Questions? Call us 24/7</p>
+              <div className="flex justify-start items-center gap-2">
+                <IoIosCall />
+                <p>+02 055 4156</p>
+              </div>
+              <div className="flex justify-start items-center gap-2">
+                <MdOutlineMail />
+                <p>Hello@skillboost.com</p>
+              </div>
+              <div className="flex justify-start items-center gap-2 ">
+                <IoLocationSharp />
+                <p>Dhaka, Bangladesh</p>
+              </div>
             </div>
-            <div className="flex justify-start items-center gap-2">
-              <MdOutlineMail />
-              <p>Hello@skillboost.com</p>
-            </div>
-            <div className="flex justify-start items-center gap-2 ">
-              <IoLocationSharp />
-              <p>Dhaka, Bangladesh</p>
+            <div className="flex space-x-4 mt-6 text-white">
+              <FaFacebookF size={23} />
+              <FaTwitter size={23} />
+              <FaLinkedin size={23} />
+              <FaInstagram size={23} />
             </div>
           </div>
-          <div className="flex space-x-4 mt-6 text-white">
-            <FaFacebookF size={23} />
-            <FaTwitter size={23} />
-            <FaLinkedin size={23} />
-            <FaInstagram size={23} />
+          <div className="absolute mt-[120px] ">
+            <Image
+              src={vector}
+              alt="LOGO"
+              width={500}
+              height={50}
+              className=""
+            />
           </div>
         </div>
 
@@ -120,31 +140,43 @@ const Footer: React.FC = () => {
 
         {/* Popular Categories */}
         <div className="text-[#F9F9F9]">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Popular Categories
-          </h3>
-          <ul className="grid gap-2">
-            <li className="mb-2">
-              <a href="#" className="hover:text-white">
-                Web Security
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="hover:text-white">
-                DevOps
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="hover:text-white">
-                Web Design
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Special Topics
-              </a>
-            </li>
-          </ul>
+          <div className="absolute mt-[57px] ">
+            <Image
+              src={vector}
+              alt="LOGO"
+              width={500}
+              height={50}
+              className=""
+            />
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Popular Categories
+            </h3>
+            <ul className="grid gap-2">
+              <li className="mb-2">
+                <a href="#" className="hover:text-white">
+                  Web Security
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="hover:text-white">
+                  DevOps
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="hover:text-white">
+                  Web Design
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white">
+                  Special Topics
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Subscribes */}
