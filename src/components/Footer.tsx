@@ -140,16 +140,6 @@ const Footer: React.FC = () => {
 
         {/* Popular Categories */}
         <div className="text-[#F9F9F9]">
-          <div className="absolute mt-[57px] hidden md:block ">
-            <Image
-              src={vector}
-              alt="LOGO"
-              width={500}
-              height={50}
-              className=""
-            />
-          </div>
-
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
               Popular Categories
@@ -178,6 +168,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+        <div className="absolute mt-[57px] ml-[800px] hidden md:block ">
+          <Image src={vector} alt="LOGO" width={500} height={50} className="" />
+        </div>
 
         {/* Subscribes */}
         <div className="text-[#F9F9F9] ">
@@ -194,7 +187,7 @@ const Footer: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-grow bg-transparent border-none focus:ring-0 focus:outline-none text-gray-700 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-400 rounded-full"
               />
-              <button className="bg-[#1C2130] text-white p-2 rounded-full">
+              <button className="bg-primary text-white p-2 rounded-full">
                 <FaArrowRight />
               </button>
             </div>
