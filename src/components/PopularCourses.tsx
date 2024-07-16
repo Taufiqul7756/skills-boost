@@ -77,12 +77,108 @@ const PopularCourses: React.FC = () => {
       lesson: 12,
       hours: 16,
       price: "$5.50",
-      ratings: 4.9,
+      ratings: 4.2,
       reviews: 250,
       author: "Taufiqul Islam",
     },
     {
       id: 7,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 3.5,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 8,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 258,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 9,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 10,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 11,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 12,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 13,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 14,
+      title: "Become a Certified Web",
+      des: "Development: HTML, CSS ans JavaS...",
+      img: "/images/CourseCard.png",
+      lesson: 12,
+      hours: 16,
+      price: "$5.50",
+      ratings: 4.9,
+      reviews: 250,
+      author: "Taufiqul Islam",
+    },
+    {
+      id: 15,
       title: "Become a Certified Web",
       des: "Development: HTML, CSS ans JavaS...",
       img: "/images/CourseCard.png",
@@ -133,7 +229,7 @@ const PopularCourses: React.FC = () => {
     <section className="bg-white py-20 px-4 sm:px-10 md:px-20 lg:px-44 relative">
       {/* Popular courses - Top */}
       <div className="container mx-auto px-4 text-center mb-12">
-        <div className="font-bold grid justify-center items-center mb-2">
+        <div className="font-bold text-xl grid justify-center items-center mb-2">
           <h1>
             Popular <span className="text-[#007BFF]">Courses</span>
           </h1>
@@ -152,14 +248,14 @@ const PopularCourses: React.FC = () => {
       {/* Card section */}
       <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-x-auto scrollbar-hide relative">
         {visibleCards.map((item) => (
-          <Card shadow="sm" key={item.id}>
+          <Card shadow="sm" key={item.id} className="mb-5">
             <CardBody className="overflow-visible p-0">
               <Image
                 shadow="sm"
                 radius="lg"
                 width="100%"
                 alt={item.title}
-                className="w-full object-fit h-[200px]"
+                className="w-full object-cover contain-fit h-[200px]"
                 src={item.img}
               />
             </CardBody>
@@ -193,10 +289,12 @@ const PopularCourses: React.FC = () => {
               </div>
             </CardBody>
 
-            <Divider />
-            <CardFooter className="flex justify-between items-center">
-              <p className="text-default-500">{item.price}</p>
-              <span>Enroll Course ↗ </span>
+            <div className="px-5">
+              <Divider />
+            </div>
+            <CardFooter className="flex justify-between items-center px-5">
+              <p className="text-[#1C2130]">{item.price}</p>
+              <span className="text-[#1C2130]">Enroll Course ↗ </span>
             </CardFooter>
           </Card>
         ))}
