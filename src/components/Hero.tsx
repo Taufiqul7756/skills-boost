@@ -28,7 +28,7 @@ const Hero = () => {
           Professional Certificates, and degrees from prestigious universities
           and leading companies.
         </p>
-        <div className="flex items-center justify-center mb-8 bg-white ">
+        <div className="flex items-center justify-center mb-8 bg-white">
           <Input
             placeholder="Search our 4000+ courses"
             className="rounded-full"

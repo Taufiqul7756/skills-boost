@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-
 import { CiSearch } from "react-icons/ci";
-
 import Link from "next/link";
 import Image from "next/image";
 import { CiDark } from "react-icons/ci";
@@ -29,7 +27,7 @@ const CustomNavbar: React.FC = () => {
 
   return (
     <Navbar className="bg-[#FDFCE8]">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-start items-start">
         <div className="">
           <NavbarContent className="hidden md:flex space-x-6">
             <NavbarItem>
@@ -46,7 +44,15 @@ const CustomNavbar: React.FC = () => {
 
         <div className="px-24">
           <NavbarBrand className="flex justify-center w-full md:w-auto">
-            <Image src={logo} alt="LOGO" width={138} height={25} />
+            <Link href="/">
+              <Image
+                src={logo}
+                className=" cursor-pointer "
+                alt="LOGO"
+                width={138}
+                height={25}
+              />
+            </Link>
           </NavbarBrand>
         </div>
 

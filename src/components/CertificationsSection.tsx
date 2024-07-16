@@ -59,7 +59,7 @@ const ProjectsAndCertificationsSection: React.FC = () => {
 
         {/* Right Side */}
         <div className="lg:w-1/2 lg:pl-12">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          <h3 className="text-2xl font-bold text-[#293575] mb-4">
             And, earn certifications for the most in-demand skills in the
             market.
           </h3>
@@ -72,8 +72,8 @@ const ProjectsAndCertificationsSection: React.FC = () => {
               src={certificate}
               alt="Certificate"
               layout="responsive"
-              width={600}
-              height={400}
+              width={400}
+              height={300}
               className="rounded-lg shadow-md"
             />
           </div>

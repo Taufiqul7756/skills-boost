@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
     >
       <div className="container mx-auto py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 bg-footer-pattern bg-size-2 bg-repeat-2 w-full h-auto lg:h-[387px]">
         {/* first column - LOGO */}
-        <div className="grid justify-center items-center">
+        <div className="grid ">
           <div>
             <Image src={logo} alt="LOGO" width={138} height={25} className="" />
             <div className="grid gap-3 mt-5 text-[#F9F9F9] ">
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <FaInstagram size={23} />
             </div>
           </div>
-          <div className="absolute mt-[120px] ">
+          <div className="absolute mt-[57px] hidden md:block ">
             <Image
               src={vector}
               alt="LOGO"
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
 
         {/* Popular Categories */}
         <div className="text-[#F9F9F9]">
-          <div className="absolute mt-[57px] ">
+          <div className="absolute mt-[57px] hidden md:block ">
             <Image
               src={vector}
               alt="LOGO"
@@ -180,7 +180,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Subscribes */}
-        <div className="text-[#F9F9F9]">
+        <div className="text-[#F9F9F9] ">
           <h3 className="text-lg font-semibold text-white mb-4">Subscribes</h3>
           <p className="text-md">
             2000+ Our students are subscribed around the world. Don’t be shy

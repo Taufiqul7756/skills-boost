@@ -17,7 +17,7 @@ const FindUs = () => {
             <IoIosFlash size={24} className="bg-[#DDE0F3] px-1 rounded-full" />
             Download and Enjoy
           </Button>
-          <div className="absolute mt-[2px] ml-[130px] hidden md:block ">
+          <div className="absolute lg:mt-[2px] Lg:ml-[130px] sm:mt-[2px] sm:ml-[130px]  hidden md:block ">
             <Image
               src={cursor}
               alt="LOGO"

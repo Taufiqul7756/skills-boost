@@ -36,7 +36,7 @@ const TopCategories = () => {
   return (
     <section className="bg-white py-16 px-8 lg:px-48">
       <div className="container mx-auto px-4 text-center mb-12">
-        <div className="font-bold grid justify-center items-center mb-2">
+        <div className="font-bold text-xl grid justify-center items-center mb-2">
           <h1>
             Top <span className="text-[#007BFF]">Categories</span>
           </h1>

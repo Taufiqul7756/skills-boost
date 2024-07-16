@@ -229,7 +229,7 @@ const PopularCourses: React.FC = () => {
     <section className="bg-white py-20 px-4 sm:px-10 md:px-20 lg:px-44 relative">
       {/* Popular courses - Top */}
       <div className="container mx-auto px-4 text-center mb-12">
-        <div className="font-bold grid justify-center items-center mb-2">
+        <div className="font-bold grid justify-center items-center mb-2 text-xl">
           <h1>
             Popular <span className="text-[#007BFF]">Courses</span>
           </h1>
