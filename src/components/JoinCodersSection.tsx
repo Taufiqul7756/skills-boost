@@ -1,6 +1,9 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { Button } from "@nextui-org/react";
+import vector from "../../public/Vector.png";
+import cursor from "../../public/images/Coursor.gif";
+import Image from "next/image";
 
 const JoinCodersSection: React.FC = () => {
   return (
@@ -16,6 +19,15 @@ const JoinCodersSection: React.FC = () => {
           <Button className="bg-white rounded-md" endContent={<FaArrowRight />}>
             Get Started
           </Button>
+          <div className="absolute mt-[-35px] ml-[88px] hidden md:block ">
+            <Image
+              src={cursor}
+              alt="LOGO"
+              width={70}
+              height={70}
+              className=""
+            />
+          </div>
         </div>
 
         {/* Right Side */}
@@ -23,6 +35,16 @@ const JoinCodersSection: React.FC = () => {
           <div>
             <h3 className="text-3xl font-bold text-blue-500">1M+</h3>
             <p className="text-white">Global Learners</p>
+
+            <div className="absolute mt-[-150px] mr-[100px] hidden md:block ">
+              <Image
+                src={vector}
+                alt="LOGO"
+                width={500}
+                height={50}
+                className=""
+              />
+            </div>
           </div>
           <div>
             <h3 className="text-3xl font-bold text-blue-500">30k+</h3>
@@ -31,6 +53,15 @@ const JoinCodersSection: React.FC = () => {
           <div>
             <h3 className="text-3xl font-bold text-blue-500">110+</h3>
             <p className="text-white">Countries</p>
+            <div className="absolute mt-[-150px] ml-[-200px] hidden md:block ">
+              <Image
+                src={vector}
+                alt="LOGO"
+                width={500}
+                height={50}
+                className=""
+              />
+            </div>
           </div>
         </div>
       </div>

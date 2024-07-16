@@ -5,10 +5,11 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { FaApple } from "react-icons/fa";
 import { Button } from "@nextui-org/react";
 import { IoIosFlash } from "react-icons/io";
+import cursor from "../../public/images/Coursor.gif";
 
 const FindUs = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24 px-4 lg:px-48 bg-white">
+    <section className="flex flex-col lg:flex-row items-center justify-between py-12 lg:py-0 px-4 mt-16 lg:px-48 bg-white">
       {/* Left Side */}
       <div className="flex flex-col items-start lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
         <div className="flex items-center mb-4 py-2">
@@ -16,6 +17,15 @@ const FindUs = () => {
             <IoIosFlash size={24} className="bg-[#DDE0F3] px-1 rounded-full" />
             Download and Enjoy
           </Button>
+          <div className="absolute mt-[2px] ml-[130px] hidden md:block ">
+            <Image
+              src={cursor}
+              alt="LOGO"
+              width={70}
+              height={70}
+              className=""
+            />
+          </div>
         </div>
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
           The Best Place To Learn? <br /> Wherever You Are.
@@ -27,7 +37,7 @@ const FindUs = () => {
           now to learn anything, anytime for free.
         </p>
 
-        <div className="flex justify-center items-center gap-5 ">
+        <div className="flex justify-center items-center gap-5 mb-12">
           <div className="flex justify-center items-center gap-5 ">
             <Button
               className="flex justify-center items-center gap-2 bg-[#131836] p-7 rounded-md"
